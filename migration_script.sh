@@ -4,7 +4,7 @@ master_count=`wc --lines < current.txt`
 date=`date`
 echo $master_count
 
-echo "$date | INFO | Getted master count as $master_count"
+echo "$date | INFO | Got master count as $master_count"
 echo "$date | INFO | entering master loop"
 
 for (( i=1; i<= $master_count ; i++ ))
@@ -13,9 +13,9 @@ do
 	current=`sed ''$i'!d' current.txt`
 	power_factor=`sed ''$i'!d' power_factor.txt`
 
-	echo "$date | INFO | Getted voltage value as $voltage"
-        echo "$date | INFO | Getted current  value as $current"
-        echo "$date | INFO | Getted power factor value as $power_factor"
+	echo "$date | INFO | Got voltage value as $voltage"
+        echo "$date | INFO | Got current  value as $current"
+        echo "$date | INFO | Got power factor value as $power_factor"
 
 	echo "voltage_$i:$voltage current_$i : $current power_factor_$i: $power_factor"
 	
